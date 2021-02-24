@@ -12,3 +12,9 @@
     display: block;
     @content;
 }
+
+@mixin mq($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
