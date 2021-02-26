@@ -1,0 +1,67 @@
+.main-navbar {
+    position: relative;
+    max-width: 100%;
+    .nav-left {
+        width: 80%;
+        background-color: $dark_color;
+        border-bottom-right-radius:80px;
+        position: relative;
+    }
+    .logo {
+        width: 20%;
+        padding: $spacing_sm;
+        background-color: $dark_color;
+    }
+
+    .nav-menu {
+        list-style: none;
+        padding: $spacing_sm;
+        background-color: $dark_color;
+        box-shadow: $box_shadow;
+        border-radius: $border_radius;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        display: block;
+        padding: {
+            top: $spacing_xl;
+        };
+        transform: translateX(100%);
+        transform-origin: right;
+        transition: transform 250ms ease-out;
+        width: 80%;
+        height: 70vh;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 1.1rem;
+        &.show {
+            display: block;
+            transform: translateX(0);
+        }
+        a {
+            display: block;
+            padding: $spacing_sm $spacing_md;
+        }
+    }
+    .burger-icon {
+            content: "";
+            position: absolute;
+            display: block;
+            background: {
+                color: transparent;
+                image: url("../../img-books/burger-menu.svg");
+                size: 100%;
+                position: center center;
+            };
+            border: none;
+            outline: none;
+            $size: 50px;
+            width: $size;
+            height: $size;
+            background-repeat: no-repeat;
+            right: -$size - 20px;
+            top: 4px;
+            cursor: pointer;
+            z-index: 999;
+        }
+}
