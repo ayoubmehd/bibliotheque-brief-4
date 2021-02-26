@@ -9,8 +9,13 @@ body {
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #CBBEAB;
-  max-width: 100%;
   overflow: hidden;
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    background-color: white;
+  }
 }
 
 a {
@@ -18,22 +23,79 @@ a {
   text-decoration: none;
 }
 
+.cta {
+  color: #FFF;
+  display: block;
+  border-radius: 23px;
+  padding: 0.9rem 1.5rem !important;
+  background-color: #CBBEAB;
+  width: 100px;
+  text-align: center;
+}
+
 .main-navbar {
   position: relative;
-  max-width: 100%;
+  height: 71px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 720px) {
+  .main-navbar {
+    position: static;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.main-navbar * {
+  z-index: 99;
+}
+
+.main-navbar .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  z-index: 10;
+  background-color: #2A361F;
+  width: 80%;
+  border-bottom-right-radius: 80px;
+  height: 71px;
 }
 
 .main-navbar .nav-left {
-  width: 80%;
-  background-color: #2A361F;
-  border-bottom-right-radius: 80px;
+  width: 10%;
   position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
-.main-navbar .logo {
-  width: 20%;
+@media screen and (min-width: 720px) {
+  .main-navbar .nav-left {
+    background-color: transparent;
+  }
+}
+
+.main-navbar .nav-left .logo {
   padding: 0.9rem;
-  background-color: #2A361F;
+}
+
+.main-navbar .nav-left .logo img {
+  height: 2.5rem;
+}
+
+@media screen and (min-width: 720px) {
+  .main-navbar .nav-left .logo {
+    width: auto;
+    max-height: 100%;
+  }
 }
 
 .main-navbar .nav-menu {
@@ -42,7 +104,7 @@ a {
   background-color: #2A361F;
   -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 40px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   display: block;
@@ -51,11 +113,12 @@ a {
           transform: translateX(100%);
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-  transition: transform 250ms ease-out, -webkit-transform 250ms ease-out;
-  width: 80%;
+  opacity: .1;
+  -webkit-transition: opacity 250ms linear, -webkit-transform 250ms ease-out;
+  transition: opacity 250ms linear, -webkit-transform 250ms ease-out;
+  transition: opacity 250ms linear, transform 250ms ease-out;
+  transition: opacity 250ms linear, transform 250ms ease-out, -webkit-transform 250ms ease-out;
+  width: 70%;
   height: 70vh;
   position: absolute;
   right: 0;
@@ -63,10 +126,38 @@ a {
   font-size: 1.1rem;
 }
 
+@media screen and (min-width: 720px) {
+  .main-navbar .nav-menu {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: unset;
+    padding-top: 0.9rem;
+    -webkit-transform: unset;
+            transform: unset;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 0 1.5rem;
+    opacity: 1;
+  }
+  .main-navbar .nav-menu li:first-child a {
+    padding-left: 0;
+  }
+}
+
 .main-navbar .nav-menu.show {
   display: block;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  opacity: 1;
 }
 
 .main-navbar .nav-menu a {
@@ -74,9 +165,48 @@ a {
   padding: 0.9rem 1.5rem;
 }
 
-.main-navbar .burger-icon {
-  content: "";
-  position: absolute;
+@media screen and (min-width: 720px) {
+  .main-navbar .nav-menu a {
+    padding: 0.9rem;
+  }
+}
+
+.main-navbar .cta_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  padding: 0.9rem;
+}
+
+@media screen and (min-width: 720px) {
+  .main-navbar .cta_wrapper {
+    width: 20%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.main-navbar .cta_wrapper .cta {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 720px) {
+  .main-navbar .cta_wrapper .cta {
+    right: 10px;
+    top: 10px;
+    margin: 0;
+  }
+}
+
+.main-navbar .cta_wrapper .burger-icon {
   display: block;
   background-color: transparent;
   background-image: url("../../img-books/burger-menu.svg");
@@ -87,9 +217,15 @@ a {
   width: 50px;
   height: 50px;
   background-repeat: no-repeat;
-  right: -70px;
+  right: 20px;
   top: 4px;
   cursor: pointer;
   z-index: 999;
+}
+
+@media screen and (min-width: 720px) {
+  .main-navbar .cta_wrapper .burger-icon {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
