@@ -8,11 +8,23 @@ body {
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: $background;
-    max-width: 100%;
-    overflow: hidden
+    overflow: hidden;
+    @include mq($md) {
+        background-color: white;
+    }
 }
 
 a {
     color: $main_color;
     text-decoration: none;
+}
+
+.cta {
+    color: #FFF;
+    display: block;
+    border-radius: 23px;
+    padding: $spacing_sm $spacing_md !important;
+    background-color: $background;
+    width: 100px;
+    text-align: center;
 }
