@@ -5,6 +5,7 @@ $nav_height: 71px;
     height: $nav_height;
     display: flex;
     align-items: center;
+    background-color: #fff;
     @include mq($md) {
         position: static;
         justify-content: space-between;

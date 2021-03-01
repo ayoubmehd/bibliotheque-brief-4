@@ -9,13 +9,6 @@ body {
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #CBBEAB;
-  overflow: hidden;
-}
-
-@media screen and (min-width: 720px) {
-  body {
-    background-color: white;
-  }
 }
 
 a {
@@ -26,11 +19,150 @@ a {
 .cta {
   color: #FFF;
   display: block;
+  border: none;
+  outline: none;
   border-radius: 23px;
   padding: 0.9rem 1.5rem !important;
   background-color: #CBBEAB;
   width: 100px;
   text-align: center;
+}
+
+.separation {
+  min-height: 60px;
+  margin: 2.5rem auto;
+  background-color: #2A361F;
+  border-radius: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.separation h1 {
+  color: #FFF;
+  text-align: center;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+
+.form .form-fild {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form .form-fild input, .form .form-fild .file {
+  width: 80%;
+  padding: 0.9rem;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.form .form-fild .file {
+  position: relative;
+  overflow: hidden;
+  background-color: #FFF;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 49px;
+}
+
+.form .form-fild .file .placeholder {
+  width: 45%;
+  padding: 0.9rem;
+  background-color: #2A361F;
+  color: #fff;
+  position: relative;
+  z-index: 9;
+  line-height: 24.5px;
+}
+
+.form .form-fild .file input[type="file"] {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.table {
+  background-color: #fff;
+  border-radius: 23px;
+  margin: 1.5rem 0;
+  padding: 2.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.table table {
+  border-spacing: 5px;
+}
+
+.table table td:not(:last-child) {
+  border-radius: 23px;
+}
+
+.table table td .cta {
+  background-color: #CBBEAB;
+  display: inline-block;
+}
+
+.table table td:not(:last-child), .table table th:not(:last-child) {
+  background-color: #CBBEAB;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 0.6rem 1.5rem;
+  width: 120px;
+}
+
+.table table th {
+  background-color: #CBBEAB;
+  border-radius: 4px !important;
+}
+
+.table table td:last-child {
+  text-align: center;
+}
+
+.table table td:first-child, .table table th:first-child {
+  padding: 0;
+  width: 70px;
 }
 
 .main-navbar {
@@ -42,6 +174,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #fff;
 }
 
 @media screen and (min-width: 720px) {
@@ -227,5 +360,19 @@ a {
   .main-navbar .cta_wrapper .burger-icon {
     display: none;
   }
+}
+
+.authors {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.authors .cta {
+  background-color: #2A361F;
+  width: auto;
+}
+
+.authors .form .form-fild {
+  width: 28%;
 }
 /*# sourceMappingURL=main.css.map */
