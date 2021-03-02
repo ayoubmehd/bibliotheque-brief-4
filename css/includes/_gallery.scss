@@ -34,18 +34,29 @@
     }
 
     &-images {
-        margin-top: $spacing_lg;
+        margin: $spacing_lg 0;
         .images {
+            @include mq($md) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
             .card {
                 display: flex;
                 flex-wrap: wrap;
-                text-align: center;
-                width: 60%;
+                width: 220px;
                 margin: 0 auto;
+                margin-bottom: $spacing_md;
+                overflow: hidden;
+                @include mq($md) {
+                    @include calcWidth(3);
+                }
+                @include mq($lg) {
+                    @include calcWidth(4);
+                }
                 img {
-                    max-width: 100%;
+                    width: 100%;
                     display: block;
-                    object-fit: cover;
                 }
                 .text {
                     width: 100%;
@@ -56,12 +67,22 @@
                     }
                     .title {
                         width: 100%;
+                        margin-top: $spacing_xs;
+                        color: $dark_color; 
+                        .prix {
+                            color: #333;
+                            font-size: .8rem;
+                            float: right;
+                        }
+                        &::after {
+                            clear: both;
+                        }
                     }
                     .author {
-                        order: 3;
-                    }
-                    .prix {
-                        order: 2;
+                        font-size: .9rem;
+                        a {
+                            color: rgba($dark_color, .8);
+                        }
                     }
                 }
             }
