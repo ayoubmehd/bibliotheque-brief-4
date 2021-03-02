@@ -1,0 +1,91 @@
+.gallery {
+    @extend .container;
+    .form {
+        flex-wrap: wrap;
+        @include mq($md) {
+            flex-wrap: nowrap;
+        }
+        &-fild {
+            margin-bottom: $spacing_sm;
+            width: 100%;
+            @include mq($md) {
+                width: 30%;
+                margin: 0;
+                margin-right: $spacing_sm;
+            }
+            select {
+                margin-left: $spacing_sm;
+            }
+            input {
+                @include mq($md) {
+                    &[type="number"] {    
+                        width: 60%;
+                    }
+                }
+            }
+        }
+        .cta {
+            width: 100%;
+            background-color:$dark_color;
+            @include mq($md) {
+                width: unset;
+            }
+        }
+    }
+
+    &-images {
+        margin: $spacing_lg 0;
+        .images {
+            @include mq($md) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .card {
+                display: flex;
+                flex-wrap: wrap;
+                width: 220px;
+                margin: 0 auto;
+                margin-bottom: $spacing_md;
+                overflow: hidden;
+                @include mq($md) {
+                    @include calcWidth(3);
+                }
+                @include mq($lg) {
+                    @include calcWidth(4);
+                }
+                img {
+                    width: 100%;
+                    display: block;
+                }
+                .text {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    & > * {
+                        width: 50%;
+                    }
+                    .title {
+                        width: 100%;
+                        margin-top: $spacing_xs;
+                        color: $dark_color; 
+                        .prix {
+                            color: #333;
+                            font-size: .8rem;
+                            float: right;
+                        }
+                        &::after {
+                            clear: both;
+                        }
+                    }
+                    .author {
+                        font-size: .9rem;
+                        a {
+                            color: rgba($dark_color, .8);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
