@@ -7,7 +7,8 @@
         "includes/_mixins.scss",
         "includes/_global.scss",
         "includes/_navbar.scss",
-        "includes/_authors.scss"
+        "includes/_authors.scss",
+        "includes/_books.scss"
     ],
     "names": [],
     "file": "main.css"
