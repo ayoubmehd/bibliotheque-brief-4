@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="./js/navbar.js"></script>
+    <title>Authors</title>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <div class="overlay"></div>
+      <div class="nav-left">
+        <div class="logo">
+          <img src="./img-books/logo.svg" alt="logo" />
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="">Home</a></li>
+        <li><a href="">Gallery</a></li>
+        <li><a href="">Authors</a></li>
+        <li><a href="">Books</a></li>
+      </ul>
+      <div class="cta_wrapper">
+        <a href="" class="cta">Contact</a>
+        <button class="burger-icon"></button>
+      </div>
+    </nav>
+
+    <main class="gallery">
+      <div class="separation">
+        <h1>Gallery</h1>
+      </div>
+
+      <form class="form">
+        <div class="form-fild">
+          <label for="author">Author</label>
+          <select name="author" id="author">
+            <option value="-1" disabled selected>Select an author</option>
+            <option value="0">author</option>
+            <option value="1">author</option>
+            <option value="2">author</option>
+          </select>
+        </div>
+        <div class="form-fild">
+          <label for="min_prix">Min prix</label>
+          <input type="number" id="min_prix" />
+        </div>
+        <div class="form-fild">
+          <label for="min_prix">Min prix</label>
+          <input type="number" id="min_prix" />
+        </div>
+        <button class="cta">Search</button>
+      </form>
+
+      <section class="gallery-images">
+        <div class="images">
+          <div class="card">
+            <img
+              src="./img-books/gallery/0cee7e54fda8ac99ec11459448e89c7d.jpg"
+              alt=""
+            />
+            <div class="text">
+              <h2 class="title">book title</h2>
+              <h3 class="author"><a href="">Book author</a></h3>
+              <p class="prix">222 dh</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

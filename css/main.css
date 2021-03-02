@@ -16,6 +16,11 @@ a {
   text-decoration: none;
 }
 
+.container, .gallery {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .cta {
   color: #FFF;
   display: block;
@@ -71,7 +76,11 @@ a {
           justify-content: space-between;
 }
 
-.form .form-fild input, .form .form-fild .file {
+.form .form-fild label {
+  display: block;
+}
+
+.form .form-fild input, .form .form-fild .file, .form .form-fild select {
   width: 80%;
   padding: 0.9rem;
   border-radius: 4px;
@@ -374,5 +383,102 @@ a {
 
 .authors .form .form-fild {
   width: 28%;
+}
+
+.gallery .form {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 720px) {
+  .gallery .form {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.gallery .form-fild {
+  margin-bottom: 0.9rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 720px) {
+  .gallery .form-fild {
+    width: 30%;
+    margin: 0;
+    margin-right: 0.9rem;
+  }
+}
+
+.gallery .form-fild select {
+  margin-left: 0.9rem;
+}
+
+@media screen and (min-width: 720px) {
+  .gallery .form-fild input[type="number"] {
+    width: 60%;
+  }
+}
+
+.gallery .form .cta {
+  width: 100%;
+  background-color: #2A361F;
+}
+
+@media screen and (min-width: 720px) {
+  .gallery .form .cta {
+    width: unset;
+  }
+}
+
+.gallery-images {
+  margin-top: 2.5rem;
+}
+
+.gallery-images .images .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.gallery-images .images .card img {
+  max-width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery-images .images .card .text {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.gallery-images .images .card .text > * {
+  width: 50%;
+}
+
+.gallery-images .images .card .text .title {
+  width: 100%;
+}
+
+.gallery-images .images .card .text .author {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.gallery-images .images .card .text .prix {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 /*# sourceMappingURL=main.css.map */

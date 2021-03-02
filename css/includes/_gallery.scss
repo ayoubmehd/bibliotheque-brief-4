@@ -1,0 +1,70 @@
+.gallery {
+    @extend .container;
+    .form {
+        flex-wrap: wrap;
+        @include mq($md) {
+            flex-wrap: nowrap;
+        }
+        &-fild {
+            margin-bottom: $spacing_sm;
+            width: 100%;
+            @include mq($md) {
+                width: 30%;
+                margin: 0;
+                margin-right: $spacing_sm;
+            }
+            select {
+                margin-left: $spacing_sm;
+            }
+            input {
+                @include mq($md) {
+                    &[type="number"] {    
+                        width: 60%;
+                    }
+                }
+            }
+        }
+        .cta {
+            width: 100%;
+            background-color:$dark_color;
+            @include mq($md) {
+                width: unset;
+            }
+        }
+    }
+
+    &-images {
+        margin-top: $spacing_lg;
+        .images {
+            .card {
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+                width: 60%;
+                margin: 0 auto;
+                img {
+                    max-width: 100%;
+                    display: block;
+                    object-fit: cover;
+                }
+                .text {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    & > * {
+                        width: 50%;
+                    }
+                    .title {
+                        width: 100%;
+                    }
+                    .author {
+                        order: 3;
+                    }
+                    .prix {
+                        order: 2;
+                    }
+                }
+            }
+        }
+    }
+}
