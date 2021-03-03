@@ -52,10 +52,11 @@ $nav_height: 71px;
         padding: {
             top: $spacing_xl;
         };
-        transform: translateX(100%);
+         transform: scaleX(0);
         transform-origin: right;
         opacity: .1;
         transition: opacity 250ms linear, transform 250ms ease-out;
+        transition-delay: 20ms;
         width: 70%;
         height: 70vh;
         position: absolute;
@@ -83,8 +84,8 @@ $nav_height: 71px;
         }
         &.show {
             display: block;
-            transform: translateX(0);
             opacity: 1;
+            transform: scaleX(100%);
         }
         a {
             display: block;

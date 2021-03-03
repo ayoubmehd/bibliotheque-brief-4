@@ -3,7 +3,24 @@
   var burgerIcon = document.querySelector(".main-navbar .burger-icon");
 
   burgerIcon.addEventListener("click", function () {
+    // showNav();
     navMenu.classList.toggle("show");
-    console.log(navMenu);
   });
+
+  // navMenu.addEventListener("transitionend", (event) => {
+  //   if (
+  //     !navMenu.classList.contains("show") &&
+  //     event.propertyName === "opacity"
+  //   ) {
+  //     hideNav();
+  //   }
+  // });
+
+  function hideNav() {
+    navMenu.style.display = "none";
+  }
+
+  function showNav() {
+    navMenu.style.display = "block";
+  }
 })();

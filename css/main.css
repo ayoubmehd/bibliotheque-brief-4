@@ -9,6 +9,11 @@ body {
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #CBBEAB;
+  scrollbar-width: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a {
@@ -251,8 +256,8 @@ a {
   border-bottom-right-radius: 0;
   display: block;
   padding-top: 3rem;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
   -webkit-transform-origin: right;
           transform-origin: right;
   opacity: .1;
@@ -260,6 +265,8 @@ a {
   transition: opacity 250ms linear, -webkit-transform 250ms ease-out;
   transition: opacity 250ms linear, transform 250ms ease-out;
   transition: opacity 250ms linear, transform 250ms ease-out, -webkit-transform 250ms ease-out;
+  -webkit-transition-delay: 20ms;
+          transition-delay: 20ms;
   width: 70%;
   height: 70vh;
   position: absolute;
@@ -297,9 +304,9 @@ a {
 
 .main-navbar .nav-menu.show {
   display: block;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
   opacity: 1;
+  -webkit-transform: scaleX(100%);
+          transform: scaleX(100%);
 }
 
 .main-navbar .nav-menu a {
