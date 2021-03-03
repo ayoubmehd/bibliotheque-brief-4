@@ -3,7 +3,7 @@ function faker() {
   books.innerHTML = "";
 
   let authors = fakeAuthors(10);
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 40; i++) {
     let price = Math.random() * 500;
 
     let { id, name } = fakeAuthor(authors);
