@@ -15,6 +15,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.hide {
+    display: none !important;
+}
+
 a {
     color: $main_color;
     text-decoration: none;
