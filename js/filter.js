@@ -7,7 +7,7 @@
     event.preventDefault();
 
     Array.from(books.children).forEach((element) => {
-      //   authorFilter(element);
+      authorFilter(element);
       priceFilter(element);
     });
   });
@@ -26,10 +26,34 @@
   }
 
   function priceFilter(element) {
-    const price = element.querySelector(".prix").textContent;
+    const price = parseFloat(
+      element.querySelector(".prix").textContent.replace("dh", "")
+    );
     const { min_prix, max_prix } = form;
-    // if (min_prix.value && )
-    // if (price > )
-    console.log(!!min_prix.value, !!max_prix.value);
+
+    if (max_prix.value) {
+      if (price > parseFloat(max_prix.value)) {
+        element.style.display = "none";
+      } else {
+        element.style.display = "flex";
+      }
+    }
+    console.log(
+      `is ${price} less than ${max_prix.value}`,
+      price < parseFloat(max_prix.value)
+    );
+
+    if (min_prix.value) {
+      if (price < parseFloat(min_prix.value)) {
+        element.style.display = "none";
+      } else {
+        element.style.display = "flex";
+      }
+    }
+
+    console.log(
+      `is ${price} bigger than ${min_prix.value}`,
+      price > parseFloat(min_prix.value)
+    );
   }
 })();
