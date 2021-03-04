@@ -37,7 +37,7 @@
   function minFilter(min_prix, price, element) {
     if (min_prix.value) {
       if (price < parseFloat(min_prix.value)) {
-        element.style.display = "none";
+        element.classList.add("hide");
       }
     }
 
@@ -50,7 +50,7 @@
   function maxFilter(max_prix, price, element) {
     if (max_prix.value) {
       if (price > parseFloat(max_prix.value)) {
-        element.style.display = "none";
+        element.classList.add("hide");
       }
     }
     console.log(
