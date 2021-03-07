@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="./js/navbar.js"></script>
+    <script defer src="./js/validation.js"></script>
+    <title>Contact</title>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <div class="overlay"></div>
+      <div class="nav-left">
+        <div class="logo">
+          <img src="./img-books/logo.svg" alt="logo" />
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="books.html">Authors</a></li>
+        <li><a href="authors.html">Books</a></li>
+      </ul>
+      <div class="cta_wrapper">
+        <a href="contact.html" class="cta">Contact</a>
+        <button class="burger-icon"></button>
+      </div>
+    </nav>
+
+    <!--   contact     -->
+    <div class="tittle">
+        <h1>CONTACT</h1>
+        </div>
+        <div  class="formulaire-msg">
+            <div class="contact1">
+                <div class="placeh">
+                    <input id="name" type="text" placeholder="nom*" >
+                    <div id="mName" class="errors"> </div>
+                </div>
+                <div>
+                    <input id="email" type="email" placeholder="email*" required>
+                    <div id="mEmail" class="errors"> </div>
+                </div>
+            </div>
+            <div class="contact1">
+                <div>
+                    <input id="phone" placeholder="telephone*">
+                    <div id="mPhone" class="errors"> </div>
+                </div>
+                <div>
+                    <input id="subject" placeholder="sujet*">
+                    <div id="mSujet" class="errors">  </div>
+    
+                </div>
+            </div>
+            <div class="contact3">
+                <div>
+                <textarea placeholder="Message*" id="message"></textarea>
+                <div id="mMessage" class="errors">  </div>
+                </div>
+            </div>
+            <div class="evnvy" style="padding-bottom: 5%;">
+                <button onclick="validateForm()" >Envoyer</button>
+            </div> 
+        </div>
+        
+    
+        <!--    footer -->
+        <div class="footer">
+        <div class="footer-con">
+            <div class="icon-sm">
+            <div class="sm">
+                <h3>Restons connectés </h3>
+            </div>
+            <ul class="icon">
+                <li> <a href="#"><img src="/icon/facebook.png"></a></li>
+                <li> <a href="#"><img src="/icon/instagram.png"></a></li>
+                <li> <a href="#"><img src="/icon/linkedin.png"></a></li>
+                <li> <a href="#"><img src="/icon/Twitter.png"></a></li>
+            </ul>
+            </div>
+            <div class="espace-mail">
+            <div class="titre">
+                <h3>Souscrire à notre Newsletter</h3>
+            </div>
+            <div class="New">
+            <input class="Newsletter" placeholder="Saisir votre email" type="Saisir votre email">
+            <button class="Subscribe">Envoyer</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>

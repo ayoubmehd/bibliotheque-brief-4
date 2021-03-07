@@ -9,7 +9,6 @@
 
   // navMenu.addEventListener("transitionend", (event) => {
   //   if (
-  //     !navMenu.classList.contains("show") &&
   //     event.propertyName === "opacity"
   //   ) {
   //     hideNav();
