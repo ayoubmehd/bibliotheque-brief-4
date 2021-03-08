@@ -1,0 +1,12 @@
+.books {
+    @extend .container;
+    .form {
+        &-fild {
+            width: 30%;
+            margin-right: $spacing_sm;
+        }
+        .cta {
+            width: 120px;
+        }
+    }
+}

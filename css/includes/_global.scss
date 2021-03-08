@@ -58,7 +58,11 @@ a {
 .form {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0 auto;
+    @include mq($md) {
+        flex-wrap: nowrap;
+    }
     .form-fild {
         display: flex;
         align-items: center;
@@ -102,6 +106,11 @@ a {
             }
         }
     }
+    
+        .cta {
+            background-color: $dark_color;
+            cursor: pointer;
+        }
 }
 
 .table {
