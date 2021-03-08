@@ -25,7 +25,7 @@ a {
   text-decoration: none;
 }
 
-.container, .gallery {
+.container, .authors, .books, .gallery {
   width: 80%;
   margin: 0 auto;
 }
@@ -70,7 +70,16 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 720px) {
+  .form {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .form .form-fild {
@@ -129,6 +138,11 @@ a {
   top: 0;
   left: 0;
   z-index: 10;
+  cursor: pointer;
+}
+
+.form .cta {
+  background-color: #2A361F;
   cursor: pointer;
 }
 
@@ -388,12 +402,20 @@ a {
 }
 
 .authors .cta {
-  background-color: #2A361F;
   width: auto;
 }
 
 .authors .form .form-fild {
   width: 28%;
+}
+
+.books .form-fild {
+  width: 30%;
+  margin-right: 0.9rem;
+}
+
+.books .form .cta {
+  width: 120px;
 }
 
 .gallery .form {
