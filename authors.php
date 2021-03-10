@@ -57,8 +57,8 @@
                 <td><?php echo $name;?></td>
                 <td><?php echo $DDN;?></td>
                 <td>
-                  <a class="cta" href="delete.php?did=<?php echo $id; ?>">Delete</a>
-                  <a class="cta" href="edit.php?eid=<?php echo $id; ?>">Edit</a>
+                  <a class="cta" href="auteur/delete.php?did=<?php echo $id; ?>">Delete</a>
+                  <a class="cta" href="auteur/edit.php?eid=<?php echo $id; ?>">Edit</a>
               </td>
             </tr>
             <?php endforeach; ?>

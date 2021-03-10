@@ -2,7 +2,7 @@
     <div class="overlay"></div>
     <div class="nav-left">
         <div class="logo">
-        <img src="./img-books/logo.svg" alt="logo" />
+        <img src="<?php p_base_url("/img-books/logo.svg") ?>" alt="logo" />
         </div>
     </div>
     <ul class="nav-menu">
