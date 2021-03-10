@@ -6,13 +6,13 @@
         </div>
     </div>
     <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="books.html">Authors</a></li>
-        <li><a href="authors.html">Books</a></li>
+        <li><a href="<?php p_base_url("/index,php") ?>">Home</a></li>
+        <li><a href="<?php p_base_url("/gallery.php") ?>">Gallery</a></li>
+        <li><a href="<?php p_base_url("/books.php") ?>">Authors</a></li>
+        <li><a href="<?php p_base_url("/authors.php") ?>">Books</a></li>
     </ul>
     <div class="cta_wrapper">
-        <a href="contact.html" class="cta">Contact</a>
+        <a href="<?php p_base_url("/contact.html") ?>" class="cta">Contact</a>
         <button class="burger-icon"></button>
     </div>
 </nav>
