@@ -1,7 +1,7 @@
 (function () {
   const form = document.querySelector("#filter");
   const books = document.querySelector("#books");
-  faker();
+  // faker();
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
