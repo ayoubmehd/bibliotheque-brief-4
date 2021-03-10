@@ -57,7 +57,7 @@
                 <td><?php echo $name;?></td>
                 <td><?php echo $DDN;?></td>
                 <td>
-                  <a class="cta" href="auteur/delete.php?did=<?php echo $id; ?>">Delete</a>
+                  <a class="cta" href="auteur/delete.php?did=<?php echo $id; ?>&redirect=<?php p_base_url($_SERVER["PHP_SELF"]) ?>">Delete</a>
                   <a class="cta" href="auteur/edit.php?eid=<?php echo $id; ?>">Edit</a>
               </td>
             </tr>
