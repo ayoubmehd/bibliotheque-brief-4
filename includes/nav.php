@@ -12,7 +12,7 @@
         <li><a href="<?php p_base_url("/authors.php") ?>">Books</a></li>
     </ul>
     <div class="cta_wrapper">
-        <a href="<?php p_base_url("/contact.html") ?>" class="cta">Contact</a>
+        <a href="<?php p_base_url("/contact.php") ?>" class="cta">Contact</a>
         <button class="burger-icon"></button>
     </div>
 </nav>
