@@ -9,12 +9,32 @@
     $row = $result->fetch(PDO::FETCH_ASSOC);
     extract($row);
 ?>
-    <form action="editprocess.php?redirect=<?php p_base_url("/books.php") ?>" method="post">
+
+    <section class="edit">
+        
+    <form class="form" action="editprocess.php?redirect=<?php p_base_url("/books.php") ?>" method="post">
         <input type="hidden" value ="<?php echo $id;?>" name="id">
-        <input type="name" value ="<?php echo $titre;?>" name="titre">            
-        <input type="file" value="<?php echo "<img src='image/".$cover."'>";?>" name="cover">
-        <input type="text" value ="<?php echo $prix;?>" name="prix">
-        <input type="submit" name="update" value="apdate">
+        <div class="form-fild">
+            <label for="">Titre</label>
+            <input type="name" value ="<?php echo $titre;?>" name="titre">            
+        </div>
+        <div class="form-fild">
+                <label for="full_name">Image</label>
+                    <div class="file">
+                        <div class="placeholder">
+                            Chose File...
+                        </div>
+                        
+                        <input type="file" value="<?php echo "<img src='image/".$cover."'>";?>" name="cover">
+                    </div>
+        </div>
+        <div class="form-fild">
+            <label for="">Prix</label>
+            <input type="text" value ="<?php echo $prix;?>" name="prix">
+        </div>
+        <input class="cta" type="submit" name="update" value="update">
     </form>
+
+    </section>
 
 <?php require_file("/includes/footer.php") ?>

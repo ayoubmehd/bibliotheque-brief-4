@@ -53,9 +53,9 @@
                 <td>
                   <img src="" alt="<?php echo $titre ?>" />
                 </td>
-                <td><?php echo $id;?></td>
-                <td><?php echo $titre;?></td>
-                <td><?php echo $prix;?></td>
+                <td><?php echo $id ?></td>
+                <td><?php echo $titre ?></td>
+                <td><?php echo $prix ?></td>
                 <td><?php echo "auteur" ?></td>
                 <td>
                   <a class="cta" href="<?php p_base_url("/books/delete.php?did=$id&redirect="  . BASE_URL . $_SERVER["PHP_SELF"]) ?>">Delete</a>
