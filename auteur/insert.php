@@ -1,6 +1,6 @@
 
 <?php
-    include 'connectdb.php';    
+    require_once __DIR__ . "\\..\\config.php";
 
     if(isset($_POST['submit']))
     {
@@ -9,8 +9,8 @@
         $photo=$_POST['photo'];
 
         $result=$connectdb->query("INSERT into auteur( name, DDN, photo) values('$name','$DDN','$photo')");
-        
-        header("location: index.php");
+    
+        redirect();
     }
 
              
