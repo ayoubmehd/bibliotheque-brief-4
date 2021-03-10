@@ -11,7 +11,7 @@
     <script defer src="<?php p_base_url("/js/navbar.js") ?>"></script>
     <?php if (isset($importJsHead)): ?>
     <?php foreach ($importJsHead as $file): ?>
-      <script defer src="<?php p_base_url("/js/$file") ?>>"></script>
+      <script defer src="<?php p_base_url("/js/$file") ?>"></script>
     <?php endforeach; ?>
     <?php endif; ?>
     <title>Home</title>
