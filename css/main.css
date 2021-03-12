@@ -25,7 +25,7 @@ a {
   text-decoration: none;
 }
 
-.container, .authors, .books, .gallery {
+.container, .authors, .books, .gallery, .edit {
   width: 80%;
   margin: 0 auto;
 }
@@ -549,5 +549,32 @@ a {
 
 .gallery-images .images .card .text .author a {
   color: rgba(42, 54, 31, 0.8);
+}
+
+.edit {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.edit .form {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.edit .form-fild {
+  width: 100%;
+  margin-top: 0.9rem;
+}
+
+.edit .form .cta {
+  margin-top: 0.9rem;
 }
 /*# sourceMappingURL=main.css.map */
