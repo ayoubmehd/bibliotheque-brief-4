@@ -6,26 +6,7 @@
           <h1>Books</h1>
       </div>
 
-      <form class="form" action="<?php p_base_url("/books/insert.php?redirect=" . BASE_URL . $_SERVER["PHP_SELF"]) ?>" method="POST">
-        <div class="form-fild">
-          <label for="title">Title</label>
-          <input type="text" placeholder="title" id="title" name="titre" />
-        </div>
-        <div class="form-fild">
-          <label for="cover">Cover</label>
-            <div class="file">
-                <div class="placeholder">
-                    Chose File...
-                </div>
-                <input type="file" placeholder="Full name" id="cover"  name="cover" />
-            </div>
-        </div>
-        <div class="form-fild">
-          <label for="price">Price</label>
-          <input type="number" placeholder="price..." id="price" name="prix" />
-        </div>
-        <button class="cta" name="submit">Add Book</button>
-      </form>
+      
       <?php
         
         $result=$connectdb->query('SELECT * FROM livre');
@@ -33,7 +14,17 @@
     
         $books = $result->fetchAll();
       
+        $action = "/books/insert.php?redirect=" . BASE_URL . $_SERVER["PHP_SELF"];
+
+        require_file("/includes/form_book.php", [
+          "action" => $action,
+          "connectdb" => $connectdb
+        ]);
+
       ?>
+
+
+
       <div class="table">
         <table>
           <thead>
