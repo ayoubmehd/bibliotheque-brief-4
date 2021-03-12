@@ -12,7 +12,7 @@
     // dump($auteurs)
 
 ?>
-<form class="form" action="<?php p_base_url($action) ?>" method="POST">
+<form enctype="multipart/form-data" class="form" action="<?php p_base_url($action) ?>" method="POST">
         <?php echo isset($id) ? '<input type="hidden" value="' . $id . '" name="id">' : ""; ?>
         <div class="form-fild">
           <label for="title">Title</label>
