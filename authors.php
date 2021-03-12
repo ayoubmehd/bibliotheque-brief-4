@@ -13,7 +13,7 @@
       </div>
 
 
-      <form class="form" action="<?php p_base_url("/auteur/insert.php?redirect=" . BASE_URL . $_SERVER["PHP_SELF"]); ?>" method="post">
+      <form enctype="multipart/form-data" class="form" action="<?php p_base_url("/auteur/insert.php?redirect=" . BASE_URL . $_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="form-fild">
           <label for="full_name">Full name</label>
           <input type="text" placeholder="Full name" id="full_name" name="name" />
