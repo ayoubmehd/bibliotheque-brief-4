@@ -4,14 +4,6 @@ function p_base_url($path = '') {
     echo BASE_URL . $path;
 }
 
-
-function upload()
-{
-if (!in_array($_FILES["image"]["type"], ["image/jpeg", "image/gif", "image/png"])) return;
-
-// var_dump($_FILES["image"]);
-}
-
 function dump($value) {    
     echo "<pre>";
     var_dump($value);
@@ -67,6 +59,8 @@ function remove_book_author_relaten($author_id, $book_id) {
 
 function upload() {
 
+    if (!in_array($_FILES["image"]["type"], ["image/jpeg", "image/gif", "image/png"])) return;
 
-    
+    // var_dump($_FILES["image"]);
+
 }
