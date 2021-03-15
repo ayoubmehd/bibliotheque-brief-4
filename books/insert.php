@@ -1,4 +1,3 @@
-
 <?php
     require_once __DIR__ . "/../config.php";
 
@@ -10,7 +9,7 @@
 
         $cover = upload("/img-books/gallery/", "cover");
         $result=$connectdb->prepare("INSERT into livre(cover, titre, prix) values(?, ?, ?)");
-        $result->execute([$cover, $titre, $prix]);        
+        $result->execute([$cover, $titre, $prix]);
 
         redirect();
     }
