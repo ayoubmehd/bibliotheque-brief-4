@@ -147,6 +147,7 @@ a {
 }
 
 .form .form-fild .file .close-icon {
+  cursor: pointer;
   position: absolute;
   right: 0.3rem;
   z-index: 999;
