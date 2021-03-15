@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -31,7 +33,7 @@ a {
 }
 
 .cta {
-  color: #FFF;
+  color: #fff;
   display: block;
   border: none;
   outline: none;
@@ -59,7 +61,7 @@ a {
 }
 
 .separation h1 {
-  color: #FFF;
+  color: #fff;
   text-align: center;
 }
 
@@ -72,6 +74,9 @@ a {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
 }
 
@@ -92,13 +97,21 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+
+.form .form-fild:not(.authors) {
+  width: calc(40% - 0.9rem);
+  margin-bottom: 0;
 }
 
 .form .form-fild label {
   display: block;
 }
 
-.form .form-fild input, .form .form-fild .file, .form .form-fild select {
+.form .form-fild input,
+.form .form-fild select,
+.form .form-fild .textarea {
   width: 80%;
   padding: 0.9rem;
   border-radius: 4px;
@@ -106,28 +119,73 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.6);
 }
 
+.form .form-fild .textarea {
+  width: 92.4%;
+  resize: none;
+  height: 90px;
+  background-color: #fff;
+}
+
+.form .form-fild .textarea input {
+  border: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
 .form .form-fild .file {
+  width: 100%;
   position: relative;
   overflow: hidden;
-  background-color: #FFF;
+  background-color: #fff;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 49px;
+  height: 350px;
+  position: relative;
+  border-radius: 4px;
+}
+
+.form .form-fild .file .close-icon {
+  position: absolute;
+  right: 0.3rem;
+  z-index: 999;
+  top: 0.3rem;
 }
 
 .form .form-fild .file .placeholder {
-  width: 45%;
-  padding: 0.9rem;
-  background-color: #2A361F;
+  width: 100%;
   color: #fff;
   position: relative;
   z-index: 9;
   line-height: 24.5px;
+  color: #CBBEAB;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form .form-fild .file .placeholder img {
+  display: block;
+}
+
+.form .form-fild .file-image {
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .form .form-fild .file input[type="file"] {
@@ -141,9 +199,22 @@ a {
   cursor: pointer;
 }
 
+.form .right {
+  width: 76%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .form .cta {
   background-color: #2A361F;
   cursor: pointer;
+  width: 20%;
 }
 
 .table {
@@ -175,7 +246,8 @@ a {
   display: inline-block;
 }
 
-.table table td:not(:last-child), .table table th:not(:last-child) {
+.table table td:not(:last-child),
+.table table th:not(:last-child) {
   background-color: #CBBEAB;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -192,7 +264,8 @@ a {
   text-align: center;
 }
 
-.table table td:first-child, .table table th:first-child {
+.table table td:first-child,
+.table table th:first-child {
   padding: 0;
   width: 70px;
 }
@@ -410,12 +483,23 @@ a {
 }
 
 .books .form-fild {
-  width: 30%;
   margin-right: 0.9rem;
 }
 
-.books .form .cta {
-  width: 120px;
+.books .form-fild:first-child {
+  width: 23%;
+}
+
+.books .form .right .authors {
+  width: 100%;
+  margin-right: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.books .form .right .authors label {
+  margin-top: 0.9rem;
 }
 
 .gallery .form {

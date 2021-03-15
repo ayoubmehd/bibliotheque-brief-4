@@ -1,12 +1,24 @@
 .books {
-    @extend .container;
-    .form {
-        &-fild {
-            width: 30%;
-            margin-right: $spacing_sm;
-        }
-        .cta {
-            width: 120px;
-        }
+  @extend .container;
+  .form {
+    &-fild {
+      margin-right: $spacing_sm;
+      &:first-child {
+        width: 23%;
+      }
     }
+    .cta {
+      //   width: 120px;
+    }
+    .right {
+      .authors {
+        width: 100%;
+        margin-right: 0;
+        align-items: flex-start;
+        label {
+          margin-top: $spacing_sm;
+        }
+      }
+    }
+  }
 }
