@@ -1,8 +1,6 @@
 (function () {
   const inputWrapper = document.querySelector(".form-fild .file");
 
-  console.log(inputWrapper);
-
   // Clear image
   const clearIcon = inputWrapper.querySelector(".close-icon");
   // file image

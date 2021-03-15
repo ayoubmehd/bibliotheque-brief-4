@@ -1,6 +1,8 @@
 <?php
   $importJsHead = [
-    "file.js"
+    "file.js",
+    "fetch.js",
+    "book.js"
   ];
 require_once "includes/header.php"
 ?>

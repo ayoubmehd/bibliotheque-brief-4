@@ -33,7 +33,9 @@
         <div class="form-fild authors">
             <label for="authors">Authors</label>
             <div class="textarea">
-                <input type="text">
+                <div class="input">
+                    <input type="text" />
+                </div>
             </div>
             <!-- <select name="authors[]" id="authors" class="authors" multiple="multiple">
                 <option value="-1" disabled selected>Select an author</option>
