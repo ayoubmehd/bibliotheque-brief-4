@@ -15,14 +15,14 @@
     <div class="form-fild">
         <div class="file">
             <img class="close-icon" src="<?php p_base_url("/icon/close.svg") ?>" title="clear image" alt="clear image">
-            <img class="file-image" src="<?php p_base_url("/img-books/gallery/0cee7e54fda8ac99ec11459448e89c7d.jpg") ?>"
-                alt="" srcset="">
+            <img class="file-image" <?php 
+                    $cover = isset($cover) ? $cover : "0cee7e54fda8ac99ec11459448e89c7d.jpg"
+                ?> src="<?php p_base_url("/img-books/gallery/$cover") ?>" alt="" srcset="">
             <label for="" class="placeholder">
                 <img src="<?php p_base_url("/icon/upload.svg") ?>" alt="" srcset="">
                 <span>Chose Cover</span>
             </label>
-            <input type="file" placeholder="Full name" id="cover" name="cover"
-                value="<?php echo isset($cover) ? $cover : ""; ?>" />
+            <input type="file" placeholder="Full name" id="cover" name="cover" value="" />
         </div>
     </div>
     <div class="right">
