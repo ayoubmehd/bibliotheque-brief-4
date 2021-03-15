@@ -1,157 +1,209 @@
-*, *::before, *::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: $background;
-    // overflow: scroll;
-    scrollbar-width: 0;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $background;
+  // overflow: scroll;
+  scrollbar-width: 0;
 }
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .hide {
-    display: none !important;
+  display: none !important;
 }
 
 a {
-    color: $main_color;
-    text-decoration: none;
+  color: $main_color;
+  text-decoration: none;
 }
 
 .container {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .cta {
-    color: #FFF;
-    display: block;
-    border: none;
-    outline: none;
-    border-radius: $border_radius_lg;
-    padding: $spacing_sm $spacing_md !important;
-    background-color: $background;
-    width: 100px;
-    text-align: center;
+  color: #fff;
+  display: block;
+  border: none;
+  outline: none;
+  border-radius: $border_radius_lg;
+  padding: $spacing_sm $spacing_md !important;
+  background-color: $background;
+  width: 100px;
+  text-align: center;
 }
 
 .separation {
-    min-height: 60px;
-    margin:  $spacing_lg auto;
-    background-color: $dark_color;
-    border-radius: $border_radius_lg;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    h1 {
-        color: #FFF;
-        text-align: center;
-    }
+  min-height: 60px;
+  margin: $spacing_lg auto;
+  background-color: $dark_color;
+  border-radius: $border_radius_lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color: #fff;
+    text-align: center;
+  }
 }
 
 .form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+  @include mq($md) {
+    flex-wrap: nowrap;
+  }
+  .form-fild {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    @include mq($md) {
-        flex-wrap: nowrap;
+    margin-bottom: $spacing_sm;
+    &:not(.authors) {
+      width: calc(40% - #{$spacing_sm});
+      margin-bottom: 0;
     }
-    .form-fild {
+    label {
+      display: block;
+    }
+    input,
+    select,
+    .textarea {
+      width: 80%;
+      padding: $spacing_sm;
+      border-radius: $border_radius;
+      outline: none;
+      border: 1px solid rgba(black, 0.6);
+    }
+    .textarea {
+      width: 92.4%;
+      resize: none;
+      height: 90px;
+      background-color: #fff;
+      input {
+        border: none;
+        padding: 0;
+        font-size: 1.2rem;
+      }
+    }
+    .file {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background-color: #fff;
+      padding: 0;
+      display: flex;
+      height: 350px;
+      position: relative;
+      border-radius: $border_radius;
+      .close-icon {
+        cursor: pointer;
+        position: absolute;
+        right: 0.3rem;
+        z-index: 999;
+        top: 0.3rem;
+      }
+      .placeholder {
+        width: 100%;
+        color: #fff;
+        position: relative;
+        z-index: 9;
+        line-height: 24.5px;
+        color: $background;
+        text-transform: uppercase;
         display: flex;
+        justify-content: center;
         align-items: center;
-        justify-content: space-between;
-        label {
-            display: block;
+        flex-direction: column;
+        img {
+          display: block;
         }
-        input, .file, select{
-            width: 80%;
-            padding: $spacing_sm;
-            border-radius: $border_radius;
-            outline: none;
-            border:1px solid rgba(black, .6);
-        }
-        .file {
-            position: relative;
-            overflow: hidden;
-            background-color: #FFF;
-            padding: 0;
-            display: flex;
-            justify-content: flex-end;
-            height: 49px;
-            .placeholder {
-                width: 45%;
-                padding: $spacing_sm;
-                background-color: $dark_color;
-                color: #fff;
-                position: relative;
-                z-index: 9;
-                line-height: 24.5px;
-            }
-            input[type="file"] {
-                opacity: 0;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 10;
-                cursor: pointer;
-            }
-        }
+      }
+      &-image {
+        position: absolute;
+        z-index: 99;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      input[type="file"] {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        cursor: pointer;
+      }
     }
-    
-        .cta {
-            background-color: $dark_color;
-            cursor: pointer;
-        }
+  } // Form Fild
+
+  .right {
+    width: 76%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .cta {
+    background-color: $dark_color;
+    cursor: pointer;
+    width: 20%;
+  }
 }
 
 .table {
-    background-color: #fff;
-    border-radius: $border_radius_lg;
-    margin: $spacing_md 0;
-    padding: $spacing_lg 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    table {
-        // border-collapse: separate;
-        border-spacing: 5px;
-        td {
-            &:not(:last-child) {
-                border-radius: $border_radius_lg;
-            }
-            
-            .cta {
-                background-color: $background;
-                display: inline-block;
-            }
-        }
-        td:not(:last-child),th:not(:last-child) {
-            background-color: $background;
-            box-sizing: content-box;
-            padding: $spacing_xs $spacing_md;
-            width: 120px;
-        }
-        th {
-            background-color: $background;
-            border-radius: $border_radius !important;
-        }
-        td:last-child {
-            text-align: center;
-        }
-        td, th {
-            &:first-child {
-                padding: 0;
-                width: 70px;
-            }
-        }
+  background-color: #fff;
+  border-radius: $border_radius_lg;
+  margin: $spacing_md 0;
+  padding: $spacing_lg 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  table {
+    // border-collapse: separate;
+    border-spacing: 5px;
+    td {
+      &:not(:last-child) {
+        border-radius: $border_radius_lg;
+      }
+
+      .cta {
+        background-color: $background;
+        display: inline-block;
+      }
     }
+    td:not(:last-child),
+    th:not(:last-child) {
+      background-color: $background;
+      box-sizing: content-box;
+      padding: $spacing_xs $spacing_md;
+      width: 120px;
+    }
+    th {
+      background-color: $background;
+      border-radius: $border_radius !important;
+    }
+    td:last-child {
+      text-align: center;
+    }
+    td,
+    th {
+      &:first-child {
+        padding: 0;
+        width: 70px;
+      }
+    }
+  }
 }
